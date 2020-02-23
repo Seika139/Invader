@@ -11,6 +11,6 @@ public class OctopusController : InvaderController {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        //StartCoroutine(Move());
+    }
 }

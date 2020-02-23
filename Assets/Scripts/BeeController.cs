@@ -11,6 +11,6 @@ public class BeeController : InvaderController {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        //StartCoroutine(Move());
+    }
 }

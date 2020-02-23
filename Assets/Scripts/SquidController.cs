@@ -10,7 +10,7 @@ public class SquidController : InvaderController {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+    void Update () {
+        //StartCoroutine(Move());
 	}
 }

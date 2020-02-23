@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,27 +13,18 @@ public class InvaderController : MonoBehaviour {
     };
     InvaderState state;
 
-    public bool OnEdge { get; private set; }
-    const float edgeX = 2.4f;
-
+    public int invaderId; // 敵の番号
     [SerializeField] InvaderManager invaderManager;
 
     protected void OnCreate()
     {
-        OnEdge = false;
         invaderManager = GameObject.Find("InvaderManager").GetComponent<InvaderManager>();
     }
 
-    void CheckPosition()
+    public IEnumerator StepOnce()
     {
-        OnEdge = Mathf.Approximately(Mathf.Abs(transform.position.x), edgeX);
-    }
-
-    public void Move ()
-    {
-        Debug.Log(invaderManager);
+        float stopTime = invaderManager.waitTime * invaderId / 3 / 55;  //waitTimeをフルに使うと微妙に見える
+        yield return new WaitForSeconds(stopTime);
         transform.position += invaderManager.Movement[invaderManager.movementState];
-        CheckPosition();
     }
-    
 }

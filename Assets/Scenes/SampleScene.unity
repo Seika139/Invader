@@ -217,12 +217,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: decf0fdfd0de4459683c4344fc5829b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitTime: 1
   canMove: 0
-  timeScale: 1
-  moveSpeed: 0
   bee: {fileID: 1842761548431830, guid: 1d7e1ce47457449dd8ab366038ed069c, type: 2}
   squid: {fileID: 1023142496216688, guid: 58241e962bddd49fcaddd5bc4d8d6ec1, type: 2}
   octopus: {fileID: 1248821139929042, guid: 2773ffc754565435b88d51c51a3a7b06, type: 2}
+  finishCreated: 0
+  platoonLeft: 0
+  platoonRight: 0
 --- !u!4 &1555281771
 Transform:
   m_ObjectHideFlags: 0
